@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penalaran Logis</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    header {
+      background-color: #4b0082;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #f0f0f0;
+      border-left: 5px solid #4b0082;
+      padding: 15px;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      background-color: #e0d5f7;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Jenis-Jenis Penalaran</h1>
+    <p>Pelajari cara berpikir logis secara sederhana!</p>
+  </header>
+
+  <div class="container">
+    <div class="card" onclick="toggle('deduktif')">
+      <h2>🧠 Penalaran Deduktif</h2>
+      <div id="deduktif" class="content">
+        <p><strong>Dari umum ke khusus.</strong> Misalnya:</p>
+        <ul>
+          <li>Semua manusia akan mati.</li>
+          <li>Ali adalah manusia.</li>
+          <li><strong>Maka, Ali akan mati.</strong></li>
+        </ul>
+        <p>Logikanya mirip seperti menggunakan rumus pasti.</p>
+        <a href="deduktif.html">Detail materi...</a>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggle('induktif')">
+      <h2>🔍 Penalaran Induktif</h2>
+      <div id="induktif" class="content">
+        <p><strong>Dari hal kecil ke kesimpulan umum.</strong> Misalnya:</p>
+        <ul>
+          <li>Ayam A bertelur.</li>
+          <li>Ayam B bertelur.</li>
+          <li>Ayam C juga bertelur.</li>
+          <li><strong>Kesimpulan: Semua ayam bisa bertelur.</strong></li>
+        </ul>
+        <p>Sifatnya <em>kemungkinan besar benar</em>, tapi tidak 100% pasti.</p>
+        <a href="induktif.html">Detail materi...</a>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggle('abduktif')">
+      <h2>🕵️ Penalaran Abduktif</h2>
+      <div id="abduktif" class="content">
+        <p><strong>Dari fakta → dugaan terbaik.</strong> Misalnya:</p>
+        <ul>
+          <li>Lantai basah di pagi hari.</li>
+          <li><strong>Dugaan: Mungkin hujan semalam.</strong></li>
+        </ul>
+        <p>Ini cara berpikir yang cepat dan berguna saat informasi terbatas.</p>
+        <a href="abduktif.html">Detail materi...</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
